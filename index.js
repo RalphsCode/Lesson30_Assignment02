@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 
+const routes = require("./routes")
+
+app.use(express.json());
+
 /* <<<< ROUTES >>>>>>>>>>>>>>>> */
-app.get('/items', function(req, res) {
-    return res.send("<h2>Items Page</h2>");
-})  // END items route
+app.use('/items', routes)
 
 
 /* <<<< SERVER >>>>>>>>>>>>>>>>>  */
