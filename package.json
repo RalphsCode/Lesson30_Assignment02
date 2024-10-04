@@ -1,0 +1,20 @@
+{
+  "name": "assignment02",
+  "version": "1.0.0",
+  "description": "Testing Express Routes using Express Router Middleware, Jest and SuperTest testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "Nodemon",
+    "Express",
+    "Routes",
+    "Jest",
+    "SuperTest"
+  ],
+  "author": "RalphsCode",
+  "license": "ISC"
+}
