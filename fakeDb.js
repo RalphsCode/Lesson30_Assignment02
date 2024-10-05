@@ -1,3 +1,6 @@
-global.items = [{name : "skittles", price : 2.99}, {name: "M&M's", price : 2.50}]
+global.items = []
 
+let kitkat = { name: "kitkat", price: 1.99 };
+ items.push(kitkat);
+ 
 module.exports = items

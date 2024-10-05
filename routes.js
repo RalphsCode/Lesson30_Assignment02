@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
     const newItem = { name: req.body.name, price: req.body.price };
     items.push(newItem);
-    res.json ({added: newItem});
+    res.status(201).json ({added: newItem});
 });  // END Route
 
 // Display an item
@@ -39,10 +39,22 @@ router.patch('/:name', function(req, res) {
 
         items[itemIdx] = { "name": newName, "price": newPrice };
 
-        res.json( { updated: items[itemIdx] });
+        res.status(201).json( { updated: items[itemIdx] });
     } else {
-    res.json( {"Not Found": requested} );
-}
+    res.status(404).json( {"Not Found": requested} );
+    }
+});  // END Route
+
+// Delete an item
+router.delete('/:name', function(req, res) {
+    const requested = req.params.name;
+    const itemIdx = items.findIndex(item => item.name === requested);
+    if (itemIdx !== -1) {
+        items.splice(itemIdx, 1);
+        res.status(200).json({"deleted": requested });
+    } else {
+        res.status(404).json( {"Not Found": requested} ); 
+    }
 });  // END Route
 
 module.exports = router;

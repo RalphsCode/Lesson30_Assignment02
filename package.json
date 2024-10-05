@@ -4,7 +4,7 @@
   "description": "Testing Express Routes using Express Router Middleware, Jest and SuperTest testing.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "Express",
@@ -16,5 +16,8 @@
     "SuperTest"
   ],
   "author": "RalphsCode",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
 }
